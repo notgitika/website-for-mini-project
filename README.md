@@ -1,1 +1,1 @@
-# website-for-mini-project
+# Website for a Socio-Economic Organization
