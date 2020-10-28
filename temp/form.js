@@ -11,14 +11,12 @@ $('.email').on("change keyup paste",
 function validateEmail(emailField){
         var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
-        if (reg.test(emailField.value) == false)
+        if (reg.test(emailField.value) == false) 
         {
             alert('Invalid Email Address');
             return false;
         }
-
         return true;
-
 }
 
 $('.next-button').hover(
@@ -50,7 +48,6 @@ $('.next-button').hover(
     $(this).css('cursor', 'pointer');
   }
 );
-
 
 $('.next-button.repeat-password').click(
   function(){
