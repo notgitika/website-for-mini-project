@@ -1,96 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>NGO</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
-
-  <!-- Favicons -->
-  <link href="img/favicon.ico" rel="icon">
-  <link href="img/favicon.ico" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-    Theme Name: Rapid
-    Theme URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
-</head>
-
-<body>
-  <!--==========================
-  Header
-  ============================-->
-  <header id="header">
-
-    <div id="topbar">
-      <div class="container">
-        <div class="social-links">
-          <a href="https://twitter.com/" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-          <a href="https://www.facebook.com" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-          <a href="https://in.linkedin.com/" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
-          <a href="https://www.instagram.com/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-
-      <div class="logo float-left">
-        <!-- Uncomment below if you prefer to use an image logo
-        Homepage
-  About us - Our work, Vision, People behind xyz, Way forward, Reach & presence, Impact, Our Partners, (Values), etc
-  Gallery (organized project wise)+ Our team
-  Media & Reporting
-  Success stories
-  List of beneficiaries
-  Contact us - footer
-  contact us - new page as well-->
-        <h1 class="text-light"><a href="#intro" class="scrollto"><span>Organisation</span></a></h1>
-        <!-- <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
-      </div>
-
-      <nav class="main-nav float-right d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="#intro">Home</a></li>
-          <li class="drop-down"><a href="#about">About Us</a>
-          <ul>
-            <li><a href="#">Our Work</a></li>
-            <li><a href="#">Vision & Mission</a></li>
-            <li><a href="#">Visioners</a></li>
-            <li><a href="#">Reach and presence</a></li>
-            <li><a href="#">Impact</a></li>
-            <li><a href="#">Our Partners</a></li>
-          </ul>
-          </li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#footer">Contact Us</a></li>
-          <li><a href="newsletter.html">Newsletter</a></li>
-        </ul>
-      </nav><!-- .main-nav -->
-
-    </div>
-  </header><!-- #header -->
-
+{% extends "layout.html" %}
+{% block content %}
   <!--==========================
     Intro Section
   ============================-->
@@ -98,14 +7,14 @@
     <div class="container d-flex h-100">
       <div class="row justify-content-center align-self-center">
         <div class="col-md-6 intro-info order-md-first order-last">
-          <h2>We value<br>Your <span>Presence!</span></h2>
+          <h2>Rapid Solutions<br>for Your <span>Business!</span></h2>
           <div>
-            <a href="newsletter.html" class="btn-get-started scrollto">Newsletter</a>
+            <a href="#about" class="btn-get-started scrollto">Get Started</a>
           </div>
         </div>
-
+  
         <div class="col-md-6 intro-img order-md-last order-first">
-          <img src="images/bg..jpg" alt="" class="img-fluid">
+          <img src="{{ url_for('static', filename='img/intro-img.svg') }}" alt="" class="img-fluid">
         </div>
       </div>
 
@@ -120,7 +29,7 @@
 
           <div class="col-lg-5 col-md-6">
             <div class="about-img">
-              <img src="img/about.jpg" alt="">
+              <img src="{{ url_for('static', filename='img/about-img.jpg') }}" alt="">
             </div>
           </div>
 
@@ -141,14 +50,12 @@
       </div>
 
     </section><!-- #about -->
-<!--Values-->
-
 
     <section id="services" class="section-bg">
       <div class="container">
 
         <header class="section-header">
-          <h3>Values</h3>
+          <h3>Services</h3>
           <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
         </header>
 
@@ -157,14 +64,14 @@
           <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
             <div class="box">
               <div class="icon" style="background: #fceef3;"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
-              <h4 class="title"><a href="">Development</a></h4>
+              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
               <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
             <div class="box">
               <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
-              <h4 class="title"><a href="">Community bonding</a></h4>
+              <h4 class="title"><a href="">Dolor Sitema</a></h4>
               <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
             </div>
           </div>
@@ -172,7 +79,7 @@
           <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
             <div class="box">
               <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
-              <h4 class="title"><a href="">Empowerment</a></h4>
+              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
               <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
             </div>
           </div>
@@ -184,13 +91,13 @@
 
 
 <!--==========================
-      Gallery
+      Portfolio Section
     ============================-->
     <section id="portfolio" class="section-bg">
       <div class="container">
 
         <header class="section-header">
-          <h3 class="section-title">Gallery</h3>
+          <h3 class="section-title">Our Gallery</h3>
         </header>
 
         <div class="row">
@@ -208,12 +115,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/img1.jpg" class="img-fluid" alt="">
+              <img src="{{ url_for('static', filename='img/portfolio/app1.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">App 1</a></h4>
                 <p>App</p>
                 <div>
-                  <a href="img/portfolio/img1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{{ url_for('static', filename='img/portfolio/app1.jpg') }}" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -222,12 +129,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/img2.jpg" class="img-fluid" alt="">
+              <img src="{{ url_for('static', filename='img/portfolio/web3.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">Web 3</a></h4>
                 <p>Web</p>
                 <div>
-                  <a href="img/portfolio/img2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{{ url_for('static', filename='img/portfolio/web3.jpg') }}" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -236,12 +143,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/img3.jpg" class="img-fluid" alt="">
+              <img src="{{ url_for('static', filename='img/portfolio/app2.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">App 2</a></h4>
                 <p>App</p>
                 <div>
-                  <a href="img/portfolio/img3.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{{ url_for('static', filename='img/portfolio/app2.jpg') }}" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -250,12 +157,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/img4.jpg" class="img-fluid" alt="">
+              <img src="{{ url_for('static', filename='img/portfolio/card2.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">Card 2</a></h4>
                 <p>Card</p>
                 <div>
-                  <a href="img/portfolio/img4.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{{ url_for('static', filename='img/portfolio/card2.jpg') }}img/portfolio/card2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -264,12 +171,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/img5.jpg" class="img-fluid" alt="">
+              <img src="{{ url_for('static', filename='img/portfolio/web2.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">Web 2</a></h4>
                 <p>Web</p>
                 <div>
-                  <a href="img/portfolio/img5.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{{ url_for('static', filename='img/portfolio/web2.jpg') }}" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -278,12 +185,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/img6.jpg" class="img-fluid" alt="">
+              <img src="{{ url_for('static', filename='img/portfolio/app3.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">App 3</a></h4>
                 <p>App</p>
                 <div>
-                  <a href="img/portfolio/img6.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{{ url_for('static', filename='img/portfolio/app3.jpg') }}" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -292,12 +199,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/img7.jpg" class="img-fluid" alt="">
+              <img src="{{ url_for('static', filename='img/portfolio/card1.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">Card 1</a></h4>
                 <p>Card</p>
                 <div>
-                  <a href="img/portfolio/img7.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{{ url_for('static', filename='img/portfolio/card1.jpg') }}" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -306,12 +213,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/img8.jpg" class="img-fluid" alt="">
+              <img src="{{ url_for('static', filename='img/portfolio/card3.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">Card 3</a></h4>
                 <p>Card</p>
                 <div>
-                  <a href="img/portfolio/img8.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{{ url_for('static', filename='img/portfolio/card3.jpg') }}" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -320,26 +227,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.2s">
             <div class="portfolio-wrap">
-              <img src="img/portfolio/img9.jpg" class="img-fluid" alt="">
+              <img src="{{ url_for('static', filename='img/portfolio/web1.jpg') }}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4><a href="#">Web 1</a></h4>
                 <p>Web</p>
                 <div>
-                  <a href="img/portfolio/img9.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
-                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.2s">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/img10.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4><a href="#">Web 1</a></h4>
-                <p>Web</p>
-                <div>
-                  <a href="img/portfolio/img10.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="{{ url_for('static', filename='img/portfolio/web1.jpg') }}" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
                   <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
                 </div>
               </div>
@@ -351,7 +244,6 @@
       </div>
     </section><!-- #portfolio -->
 
-<!--Accrediations    -->
     <section id="testimonials">
       <div class="container">
 
@@ -363,38 +255,38 @@
           <div class="col-lg-8">
 
             <div class="owl-carousel testimonials-carousel wow fadeInUp">
-
+    
               <div class="testimonial-item">
-                <img src="img/sou.jpeg" class="testimonial-img" alt="">
-                <h3>Sourav Kumar</h3>
-                <h4>Team Member</h4>
+                <img src="{{ url_for('static', filename='img/testimonial-1.jpg') }}" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
                 <p>
                   Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
                 </p>
               </div>
-
+    
               <div class="testimonial-item">
-                <img src="img/gitika.jpeg" class="testimonial-img" alt="">
-                <h3>Gitika Jha</h3>
-                <h4>Team Member</h4>
+                <img src="{{ url_for('static', filename='img/testimonial-2.jpg') }}" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
                 <p>
                   Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
                 </p>
               </div>
-
+    
               <div class="testimonial-item">
-                <img src="img/ved.jpeg" class="testimonial-img" alt="">
-                <h3>Vedant Manelkar</h3>
-                <h4>Team Member</h4>
+                <img src="{{ url_for('static', filename='img/testimonial-3.jpg') }}" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
                 <p>
                   Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
                 </p>
               </div>
-
+    
               <div class="testimonial-item">
-                <img src="img/Man.jpeg" class="testimonial-img" alt="">
-                <h3>Manashree Jhawar</h3>
-                <h4>Team Member</h4>
+                <img src="{{ url_for('static', filename='img/testimonial-4.jpg') }}" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
                 <p>
                   Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
                 </p>
@@ -424,11 +316,11 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp">
             <div class="member">
-              <img src="img/gitika.jpeg" class="img-fluid" alt="">
+              <img src="{{ url_for('static', filename='img/team-1.jpg') }}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Gitika Jha</h4>
-                  <span>Team Member</span>
+                  <h4>Walter White</h4>
+                  <span>Chief Executive Officer</span>
                   <div class="social">
                     <a href=""><i class="fa fa-twitter"></i></a>
                     <a href=""><i class="fa fa-facebook"></i></a>
@@ -442,11 +334,11 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="member">
-              <img src="img/ved.jpeg" class="img-fluid" alt="">
+              <img src="{{ url_for('static', filename='img/team-2.jpg') }}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Vedant Manelkar</h4>
-                  <span>Team Member</span>
+                  <h4>Sarah Jhonson</h4>
+                  <span>Product Manager</span>
                   <div class="social">
                     <a href=""><i class="fa fa-twitter"></i></a>
                     <a href=""><i class="fa fa-facebook"></i></a>
@@ -460,11 +352,11 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
             <div class="member">
-              <img src="img/Man.jpeg" class="img-fluid" alt="">
+              <img src="{{ url_for('static', filename='img/team-3.jpg') }}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Manashree Jhawar</h4>
-                  <span>Team Member</span>
+                  <h4>William Anderson</h4>
+                  <span>CTO</span>
                   <div class="social">
                     <a href=""><i class="fa fa-twitter"></i></a>
                     <a href=""><i class="fa fa-facebook"></i></a>
@@ -478,10 +370,10 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
             <div class="member">
-              <img src="img/sou.jpeg" class="img-fluid" alt="">
+              <img src="{{ url_for('static', filename='img/team-4.jpg') }}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Team Member</h4>
+                  <h4>William Anderson</h4>
                   <span>CTO</span>
                   <div class="social">
                     <a href=""><i class="fa fa-twitter"></i></a>
@@ -495,10 +387,10 @@
           </div>
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
             <div class="member">
-              <img src="img/sou.jpeg" class="img-fluid" alt="">
+              <img src="{{ url_for('static', filename='img/team-1.jpg') }}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Sourav Kumar</h4>
+                  <h4>William Anderson</h4>
                   <span>CTO</span>
                   <div class="social">
                     <a href=""><i class="fa fa-twitter"></i></a>
@@ -512,10 +404,10 @@
           </div>
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
             <div class="member">
-              <img src="img/gitika.jpeg" class="img-fluid" alt="">
+              <img src="{{ url_for('static', filename='img/team-3.jpg') }}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Gitika Jha</h4>
+                  <h4>William Anderson</h4>
                   <span>CTO</span>
                   <div class="social">
                     <a href=""><i class="fa fa-twitter"></i></a>
@@ -529,10 +421,10 @@
           </div>
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
             <div class="member">
-              <img src="img/ved.jpeg" class="img-fluid" alt="">
+              <img src="{{ url_for('static', filename='img/team-4.jpg') }}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Vedant Manelkar</h4>
+                  <h4>William Anderson</h4>
                   <span>CTO</span>
                   <div class="social">
                     <a href=""><i class="fa fa-twitter"></i></a>
@@ -547,10 +439,10 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="member">
-              <img src="img/Man.jpeg" class="img-fluid" alt="">
+              <img src="{{ url_for('static', filename='img/team-2.jpg') }}" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Manashree Jhawar</h4>
+                  <h4>Amanda Jepson</h4>
                   <span>Accountant</span>
                   <div class="social">
                     <a href=""><i class="fa fa-twitter"></i></a>
@@ -579,14 +471,14 @@
         </header>
 
         <div class="owl-carousel clients-carousel">
-          <img src="img/clients/client-1.png" alt="">
-          <img src="img/clients/client-2.png" alt="">
-          <img src="img/clients/client-3.png" alt="">
-          <img src="img/clients/client-4.png" alt="">
-          <img src="img/clients/client-5.png" alt="">
-          <img src="img/clients/client-6.png" alt="">
-          <img src="img/clients/client-7.png" alt="">
-          <img src="img/clients/client-8.png" alt="">
+          <img src="{{ url_for('static', filename='img/clients/client-1.png') }}" alt="">
+          <img src="{{ url_for('static', filename='img/clients/client-2.png') }}" alt="">
+          <img src="{{ url_for('static', filename='img/clients/client-3.png') }}" alt="">
+          <img src="{{ url_for('static', filename='img/clients/client-4.png') }}" alt="">
+          <img src="{{ url_for('static', filename='img/clients/client-5.png') }}" alt="">
+          <img src="{{ url_for('static', filename='img/clients/client-6.png') }}" alt="">
+          <img src="{{ url_for('static', filename='img/clients/client-7.png') }}" alt="">
+          <img src="{{ url_for('static', filename='img/clients/client-8.png') }}" alt="">
         </div>
 
       </div>
@@ -606,16 +498,16 @@
         </header>
 
         <div class="row flex-items-xs-middle flex-items-xs-center">
-
+      
           <!-- Basic Plan  -->
           <div class="col-xs-12 col-lg-4">
             <div class="card">
               <div class="card-header">
-                <h3><span>Event </span>1</h3>
+                <h3><span class="currency">$</span>19<span class="period">/month</span></h3>
               </div>
               <div class="card-block">
-                <h4 class="card-title">
-                  Description
+                <h4 class="card-title"> 
+                  Basic Plan
                 </h4>
                 <ul class="list-group">
                   <li class="list-group-item">Odio animi voluptates</li>
@@ -623,20 +515,20 @@
                   <li class="list-group-item">Et perspiciatis suscipit</li>
                   <li class="list-group-item">24/7 Support System</li>
                 </ul>
-                <a href="#" class="btn">Register</a>
+                <a href="#" class="btn">Choose Plan</a>
               </div>
             </div>
           </div>
-
+      
           <!-- Regular Plan  -->
           <div class="col-xs-12 col-lg-4">
             <div class="card">
               <div class="card-header">
-                <h3><span>Event </span>2</h3>
+                <h3><span class="currency">$</span>29<span class="period">/month</span></h3>
               </div>
               <div class="card-block">
-                <h4 class="card-title">
-                  Description
+                <h4 class="card-title"> 
+                  Regular Plan
                 </h4>
                 <ul class="list-group">
                   <li class="list-group-item">Odio animi voluptates</li>
@@ -644,20 +536,20 @@
                   <li class="list-group-item">Et perspiciatis suscipit</li>
                   <li class="list-group-item">24/7 Support System</li>
                 </ul>
-                <a href="#" class="btn">Register</a>
+                <a href="#" class="btn">Choose Plan</a>
               </div>
             </div>
           </div>
-
+      
           <!-- Premium Plan  -->
           <div class="col-xs-12 col-lg-4">
             <div class="card">
               <div class="card-header">
-                <h3><span>Event </span>3</h3>
+                <h3><span class="currency">$</span>39<span class="period">/month</span></h3>
               </div>
               <div class="card-block">
-                <h4 class="card-title">
-                  Description
+                <h4 class="card-title"> 
+                  Premium Plan
                 </h4>
                 <ul class="list-group">
                   <li class="list-group-item">Odio animi voluptates</li>
@@ -665,11 +557,11 @@
                   <li class="list-group-item">Et perspiciatis suscipit</li>
                   <li class="list-group-item">24/7 Support System</li>
                 </ul>
-                <a href="#" class="btn">Register</a>
+                <a href="#" class="btn">Choose Plan</a>
               </div>
             </div>
           </div>
-
+      
         </div>
       </div>
 
@@ -682,123 +574,6 @@
 
 <!-- This gonna be the newsletter wala -->
 <div class="text-center" style="font-size: 35px;">Would you like to stay connected?</div> <br>
-<div class="text-center"><button class="btn btn-primary"><a href="newsletter.html" style="color: white;">Subscribe to the newsletter</a></button></div>
+<div class="text-center"><button class="btn btn-primary"><a href="{{ url_for('newsletter') }}" style="color: white;">Subscribe to the newsletter</a></button></div> 
 <br>
-<!-- this gonna be footer -->
-   <footer id="footer" class="section-bg">
-    <div class="footer-top">
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6">
-
-            <div class="row">
-
-                <div class="col-sm-6">
-
-                  <div class="footer-info" style="font-family:Montserrat, sans-serif;">
-                    <h3>Rapid</h3>
-                    <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
-                  </div>
-
-                  <div class="footer-newsletter" style="font-family:Montserrat, sans-serif;">
-                    <p> lorem ipsum samina mina waka waka eh eh sammina mina its time for africa Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem.</p>
-
-                  </div>
-
-                </div>
-
-                <div class="col-sm-6">
-                  <div class="footer-links">
-                    <h4></h4>
-
-                  </div>
-
-                  <div class="footer-links">
-                    <h4>Contact Us</h4>
-                    <p>
-                      A108 Adam Street <br><br>
-                      New York, NY 535022<br><br>
-                      United States <br><br>
-                      <strong>Phone:</strong> +1 5589 55488 55<br>
-                      <strong>Email:</strong> info@example.com<br>
-                    </p>
-                  </div>
-
-                  <div class="social-links">
-                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                  </div>
-
-                </div>
-
-            </div>
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="form">
-
-              <h4>Send us a message</h4>
-              <p>Eos ipsa est voluptates. Nostrum nam libero ipsa vero. Debitis quasi sit eaque numquam similique commodi harum aut temporibus.</p>
-              <form action="" method="post" role="form" class="contactForm">
-                <div class="form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                  <div class="validation"></div>
-                </div>
-
-                <div id="sendmessage">Your message has been sent. Thank you!</div>
-                <div id="errormessage"></div>
-
-                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
-              </form>
-            </div>
-
-          </div>
-
-
-
-        </div>
-
-      </div>
-    </div>
-
-  </footer><!-- #footer -->
-
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-<!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/mobile-nav/mobile-nav.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/waypoints/waypoints.min.js"></script>
-  <script src="lib/counterup/counterup.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/isotope/isotope.pkgd.min.js"></script>
-  <script src="lib/lightbox/js/lightbox.min.js"></script>
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
-
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
-
-</body>
-</html>
+{% endblock content%}
