@@ -174,7 +174,7 @@ a:focus, img:focus, button:focus, .btn:focus {outline:none;text-decoration: none
 
 .main-menu ul {list-style-type: none; text-align:center; margin:0; padding:0; }
 
-.main-menu ul li {width:100%; display:inline-block;font-family: 'Oranienbaum', serif; text-transform:uppercase; font-size:30px; margin-bottom:30px; font-weight:400; position:relative;z-index:1;  transition: all 0.400s;transition-delay: 0.370s;}
+.main-menu ul li {width:100%; display:inline-block;font-family: 'Poppins', serif; text-transform:uppercase; font-size:30px; margin-bottom:30px; font-weight:400; position:relative;z-index:1;  transition: all 0.400s;transition-delay: 0.370s;}
 
 .main-menu ul li{ position:relative; ; }
 
@@ -212,7 +212,7 @@ z-index:2;transition: width 0.3s; z-index:1}
 
 .footer img{ margin:0 auto}
 
-.footer h3{ text-align:center; color:#FFF;font-family: 'Oranienbaum', serif; text-transform:uppercase; letter-spacing:2px; font-size:21px; position:relative}
+.footer h3{ text-align:center; color:#FFF;font-family: 'Poppins', serif; text-transform:uppercase; letter-spacing:2px; font-size:21px; position:relative}
 
 .footer h3:after{ content:""; margin:0 auto; display:block; position:absolute; bottom:-20px; left:0; right:0; width:63px; height:3px; background-color:#FFF}
 
