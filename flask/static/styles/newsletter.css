@@ -1,8 +1,8 @@
 body {
-	 font-family: "Roboto";
+	 font-family: "Poppins";
 }
  .back {
-	
+
 	 position: absolute;
 	 width: 100%;
 	 height: 100%;
@@ -13,7 +13,7 @@ body {
 	 left: 50%;
 	 transform: translate(-50%, 0%);
 	 top: 35%;
-	 
+
 }
  .registration-form header {
 	 position: relative;
