@@ -3,7 +3,7 @@
 <br><br><br>
 <h2></h2>
 <div class="row">
-  <div class="col-2" style="margin-left: 100px; color: #007bff">
+  <div class="col-2 " id="" style="margin-left: 100px; color: #007bff">
     <div class="list-group" id="list-tab" role="tablist">
       <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Our Work</a>
       <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Vision and mission</a>
@@ -12,14 +12,15 @@
       <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Impact</a>
       <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Our Partners</a>
     </div>
+    {% block layout3 %}
+    {% endblock %}
+
   </div>
-  <div class="col-4" >
-    <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">kdnflkdanfklnasd</div>
-      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
-      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
-      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
-    </div>
-  </div>
+  
+     {% block layout2 %}
+      {% endblock %}
 </div>
 {% endblock content%}
+
+{% block layout4 %}
+{% endblock layout4 %}
