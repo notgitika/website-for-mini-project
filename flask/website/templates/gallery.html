@@ -1,8 +1,12 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<br><br><br>
-<br><br><br>
+<br><br>
+
+ <header class="section-header">
+          <h3>Gallery</h3>
+          <hr>
+        </header>
 
 
 <main class="main-wrapper" id="container">
@@ -157,6 +161,15 @@
               <a href="details.html">View more</a> </figcaption>
           </figure>
         </li>
+        <li class="masonry-item grid">
+          <figure class="effect-sarah"> <img src="{{ url_for('static', filename='img/portfolio/img8.jpg') }}" alt="" />
+            <figcaption>
+              <h2>Photo <span>Title</span></h2>
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              <a href="details.html">View more</a> </figcaption>
+          </figure>
+        </li>
+       
       </ul>
     </div>
   </div>

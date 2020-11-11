@@ -88,10 +88,10 @@
           <!-- <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
         </div>
 
-        <nav class="main-nav float-right d-none d-lg-block">
+        <nav class="main-nav float-right d-none d-md-block">
           <ul>
             <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
-            <li class="drop-down"><a href="#about">About Us</a>
+            <li class="drop-down"><a href="{{ url_for('ourwork') }}">About Us</a>
             <ul>
               <li><a href="{{ url_for('ourwork') }}">Our Work</a></li>
               <li><a href="{{ url_for('vision') }}">Vision & Mission</a></li>
@@ -99,7 +99,7 @@
               <li><a href="{{ url_for('reach') }}">Reach and presence</a></li>
               <li><a href="{{ url_for('impact') }}">Impact</a></li>
               <li><a href="{{ url_for('partners') }}">Our Partners</a></li>
-              <li><a href="{{ url_for('newsletter') }}">Newsletter</a></li><!-- hua -->
+              
             </ul>
             </li>
             <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
@@ -115,7 +115,7 @@
 
     <br><br><br><br>
     {% block content %}{% endblock %}
-    <br><br><br><br>
+  
 
     <!-- this gonna be footer -->
    <footer id="footer" class="section-bg">
@@ -130,26 +130,23 @@
 
                 <div class="col-sm-12">
 
-                  <div class="footer-info" style="font-family:Montserrat, sans-serif;">
+                  <div class="footer-info" style="font-family:Poppins, sans-serif;">
                     <h3>Organisation</h3>
-                    <p></p>
-                  </div>
-
-                  <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241316.6433229747!2d72.74109780863927!3d19.08252232377542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1604934462227!5m2!1sen!2sin" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe> -->
-
-                </div>
-
+                    
+                  </div></div>
+                  
                 <div class="col-sm-8">
 
-                  <div class="footer-links">
+                  <div class="footer-links" >
+                    <br>
                     <h4>Contact Us</h4>
                     <p>
-                      <i class="fa fa-map-marker"></i>
-                      <p>A108 Adam Street<br>New York, NY 535022</p>
-                      <i class="fa fa-phone"></i>
-                      <p>+1 5589 55488 55s</p>
-                      <i class="fa fa-envelope"></i>
-                      <p>info@example.com</p>
+                      <p> <i class="fa fa-map-marker">  &nbsp; A 108 Adam Street, <br> &emsp; New York, <br>  &emsp; NY 535022</i></p>
+                      
+                      <p><i class="fa fa-phone"> &nbsp; +1 5589 55488 55s</i></p>
+                      
+                      <p><i class="fa fa-envelope"> &nbsp; info@example.com</i></p>
+                      
                     </p>
                   </div>
 
@@ -163,6 +160,7 @@
             </div>
           </div>
           <div class="col-lg-6">
+            <!-- <br><br> -->
             <div class="form">
               <h4>Send us a message</h4>
               <p>Eos ipsa est voluptates. Nostrum nam libero ipsa vero. Debitis quasi sit eaque numquam similique commodi harum aut temporibus.</p>
@@ -201,6 +199,11 @@
   </footer><!-- #footer -->
 
   <a href="index.html" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- CSS Stylesheets -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}">
+
 <!-- JavaScript Libraries -->
  <script type="text/javascript" src="{{ url_for('static', filename='lib/jquery/jquery.min.js') }}"></script>
  <script type="text/javascript" src="{{ url_for('static', filename='lib/jquery/jquery-migrate.min.js') }}"></script>
@@ -215,7 +218,6 @@
  <script type="text/javascript" src="{{ url_for('static', filename='lib/isotope/isotope.pkgd.min.js') }}"></script>
   <script type="text/javascript" src="{{ url_for('static', filename='lib/lightbox/js/lightbox.min.js') }}"></script>
   <!-- Contact Form JavaScript File -->
-  <!-- idk if this is supposed to be included or not-->
 <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/main1.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/vedant.js') }}"></script>
