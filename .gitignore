@@ -1,2 +1,6 @@
-.__pycache__
-*.md
+# ignoring all cached files and .db files
+.flask/__pycache__/
+.flask/website/__pycache__/
+*.pyc
+.vscode/
+*.db
