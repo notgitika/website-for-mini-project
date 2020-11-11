@@ -88,10 +88,10 @@
           <!-- <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
         </div>
 
-        <nav class="main-nav float-right d-none d-lg-block">
+        <nav class="main-nav float-right d-none d-md-block">
           <ul>
             <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
-            <li class="drop-down"><a href="#about">About Us</a>
+            <li class="drop-down"><a href="{{ url_for('ourwork') }}">About Us</a>
             <ul>
               <li><a href="{{ url_for('ourwork') }}">Our Work</a></li>
               <li><a href="{{ url_for('vision') }}">Vision & Mission</a></li>
@@ -99,7 +99,7 @@
               <li><a href="{{ url_for('reach') }}">Reach and presence</a></li>
               <li><a href="{{ url_for('impact') }}">Impact</a></li>
               <li><a href="{{ url_for('partners') }}">Our Partners</a></li>
-              <li><a href="{{ url_for('newsletter') }}">Newsletter</a></li><!-- hua -->
+              
             </ul>
             </li>
             <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
@@ -115,7 +115,7 @@
 
     <br><br><br><br>
     {% block content %}{% endblock %}
-    <br><br><br><br>
+  
 
     <!-- this gonna be footer -->
    <footer id="footer" class="section-bg">
@@ -144,12 +144,12 @@
                   <div class="footer-links">
                     <h4>Contact Us</h4>
                     <p>
-                      <i class="fa fa-map-marker"></i>
-                      <p>A108 Adam Street<br>New York, NY 535022</p>
-                      <i class="fa fa-phone"></i>
-                      <p>+1 5589 55488 55s</p>
-                      <i class="fa fa-envelope"></i>
-                      <p>info@example.com</p>
+                      <i class="fa fa-map-marker"> A 108 Adam StreetNew York, NY 535022</i><br><br>
+                      
+                      <i class="fa fa-phone"> +1 5589 55488 55s</i><br><br>
+                      
+                      <i class="fa fa-envelope"> info@example.com</i><br><br>
+                      
                     </p>
                   </div>
 
