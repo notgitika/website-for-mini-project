@@ -6,11 +6,11 @@ from website import app
 @app.route("/")
 @app.route("/home")
 def home():
-	return render_template('index.html')
+	return render_template('index.html', title ='Homepage')
 
 @app.route("/index")
 def index():
-	return render_template('index.html')
+	return render_template('index.html', title ='Homepage')
 
 @app.route("/layout")
 def layout():
@@ -25,15 +25,15 @@ def newsletter():
 		db.session.commit()
 		flash(f'Your message has been sent!','success')
 		return redirect(url_for('home'))
-	return render_template('newsletter.html')
+	return render_template('newsletter.html', title = 'Newsletter')
 
 @app.route("/ourwork")
 def ourwork():
-	return render_template('ourwork.html')
+	return render_template('ourwork.html', title = 'Our Work')
 
 @app.route("/vision")
 def vision():
-	return render_template('vision.html')
+	return render_template('vision.html', title = 'Vision and Mission')
 
 @app.route("/visioners")
 def visioners():
@@ -53,15 +53,15 @@ def partners():
 
 @app.route("/gallery")
 def gallery():
-	return render_template('gallery.html')
+	return render_template('gallery.html', title ='Gallery')
 
 @app.route("/team")
 def team():
-	return render_template('team.html')
+	return render_template('team.html', title = 'Team')
 
 @app.route("/contactus")
 def contactus():
-	return render_template('contactus.html')
+	return render_template('contactus.html', title = 'Contact Us')
 
 @app.route("/layout2")
 def layout2():
