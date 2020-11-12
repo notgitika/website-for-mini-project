@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for
-from website.models import User,Newsletter
+from website.forms import ContactForm, NewsletterSub
+from website.models import User, Newsletter
 from website import app
-
 
 @app.route("/")
 @app.route("/home")
@@ -16,8 +16,15 @@ def index():
 def layout():
 	return render_template('layout.html')
 
-@app.route("/newsletter")
+@app.route("/newsletter", methods=['GET','POST'])
 def newsletter():
+	form = NewsletterSub()
+	if form.validate_on_submit():
+		new = Newsletter(email = form.email.data, name=form.name.data)
+		db.session.add(new)
+		db.session.commit()
+		flash(f'Your message has been sent!','success')
+		return redirect(url_for('home'))
 	return render_template('newsletter.html')
 
 @app.route("/ourwork")
