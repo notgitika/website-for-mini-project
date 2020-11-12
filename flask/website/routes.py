@@ -3,8 +3,6 @@ from website.forms import ContactForm, NewsletterSub
 from website.models import User, Newsletter
 from website import app
 
-
-
 @app.route("/")
 @app.route("/home")
 def home():
@@ -16,7 +14,6 @@ def index():
 
 @app.route("/layout")
 def layout():
-
 	return render_template('layout.html')
 
 @app.route("/newsletter", methods=['GET','POST'])
