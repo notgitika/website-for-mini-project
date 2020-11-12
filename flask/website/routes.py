@@ -14,10 +14,18 @@ def index():
 
 @app.route("/layout")
 def layout():
+
 	return render_template('layout.html')
 
-@app.route("/newsletter")
+@app.route("/newsletter", methods=['GET','POST'])
 def newsletter():
+	form = User()
+	if form.validate_on_submit():
+		user = User(email = form.email.data, name=form.name.data)
+		db.session.add(user)
+		db.session.commit()
+		flash(f'Your message has been sent!','success')
+		return redirect(url_for('home'))
 	return render_template('newsletter.html')
 
 @app.route("/ourwork")
