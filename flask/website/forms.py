@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, BooleanField
+from wtforms import StringField, SubmitField, validators
 from wtforms.validators import DataRequired, Length, Email, EqualTo
 
 
@@ -13,7 +13,7 @@ class ContactForm(FlaskForm):
     sendmessage = SubmitField('Send message')
 
 
-class Newsletter(FlaskForm):
+class NewsletterSub(FlaskForm):
     email = StringField('Email',
                         validators=[DataRequired(), Email()])
     name = StringField('name',
