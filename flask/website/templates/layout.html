@@ -90,7 +90,7 @@
 
         <nav class="main-nav float-right d-none d-md-block">
           <ul>
-            <li class="active"><a href="{{ url_for('home') }}" >Home</a></li>
+            <li role="presentation" {% if title == 'Homepage' %}class="active"{% endif %}><a href="{{ url_for('home') }}" >Home</a></li>
             <li class="drop-down"><a href="{{ url_for('ourwork') }}" >About Us</a>
             <ul>
               <li><a href="{{ url_for('ourwork') }}" >Our Work</a></li>
@@ -102,10 +102,10 @@
 
             </ul>
             </li>
-            <li><a href="{{ url_for('gallery') }}" >Gallery</a></li>
-            <li><a href="{{ url_for('team') }}" >Team</a></li>
-            <li><a href="{{ url_for('contactus') }}" >Contact Us</a></li>
-            <li><a href="{{ url_for('newsletter') }}" >Newsletter</a></li>
+            <li role="presentation" {% if title == 'Gallery' %}class="active"{% endif %}><a href="{{ url_for('gallery') }}" >Gallery</a></li>
+            <li role="presentation" {% if title == 'Newsletter' %}class="active"{% endif %}><a href="{{ url_for('newsletter') }}" >Newsletter</a></li>
+            <li role="presentation" {% if title == 'Team' %}class="active"{% endif %}><a href="{{ url_for('team') }}" >Team</a></li>
+            <li role="presentation" {% if title == 'Contact Us' %}class="active"{% endif %}><a href="{{ url_for('contactus') }}" >Contact Us</a></li>
           </ul>
         </nav><!-- .main-nav -->
 
