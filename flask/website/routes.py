@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request
 from website.forms import ContactForm, NewsletterSub
 from website.models import User, Newsletter
 from website import app
@@ -12,9 +12,16 @@ def home():
 def index():
 	return render_template('index.html', title ='Homepage')
 
-@app.route("/layout")
+@app.route("/layout", methods=['GET','POST'])
 def layout():
-	return render_template('layout.html')
+	form = ContactForm()
+	if form.validate_on_submit():
+		user = User(name = form.name.data, email = form.email.data, subject = form.subject.data, message = form.message.data)
+		db.session.add(user)
+		db.session.commit()
+		flash(f'Your message has been sent!','success')
+		return redirect(url_for('home'))
+	return render_template('index.html')
 
 @app.route("/newsletter", methods=['GET','POST'])
 def newsletter():
@@ -23,9 +30,9 @@ def newsletter():
 		new = Newsletter(email = form.email.data, name=form.name.data)
 		db.session.add(new)
 		db.session.commit()
-		flash(f'Your message has been sent!','success')
+		flash(f'You are now subscribed to our newsletter!','success')
 		return redirect(url_for('home'))
-	return render_template('newsletter.html', title = 'Newsletter')
+	return render_template('newsletter.html', title = 'Newsletter', form = form)
 
 @app.route("/ourwork")
 def ourwork():
@@ -59,9 +66,16 @@ def gallery():
 def team():
 	return render_template('team.html', title = 'Team')
 
-@app.route("/contactus")
+@app.route("/contactus" ,methods=['GET','POST'])
 def contactus():
-	return render_template('contactus.html', title = 'Contact Us')
+	form = ContactForm()
+	if form.validate_on_submit():
+		user = User(name = form.name.data, email = form.email.data, subject = form.subject.data, message = form.message.data)
+		db.session.add(user)
+		db.session.commit()
+		flash(f'Your message has been sent!','success')
+		return redirect(url_for('home'))
+	return render_template('contactus.html', title = 'Contact Us', form=form)
 
 @app.route("/layout2")
 def layout2():

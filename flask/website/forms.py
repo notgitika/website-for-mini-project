@@ -14,7 +14,7 @@ class ContactForm(FlaskForm):
 
 
 class NewsletterSub(FlaskForm):
-    email = StringField('Email',
+    email = StringField('email',
                         validators=[DataRequired(), Email()])
     name = StringField('name',
                            validators=[DataRequired(), Length(min=2, max=20)])
