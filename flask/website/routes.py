@@ -1,6 +1,5 @@
 from flask import Flask, render_template, url_for, redirect, flash
-# from website.forms import ContactForm, NewsletterSub
-from website.forms import RegistrationForm
+from website.forms import ContactForm, NewsletterSub
 from website.models import User, Newsletter
 from website import app, db
 
@@ -17,16 +16,10 @@ def index():
 def layout():
 	form = ContactForm()
 	if form.validate_on_submit():
-		name = request.args.get('name')
-		email = request.args.get('email')
-		subject = request.args.get('subject')
-		message = request.args.get('message')
-		if name and email and subject and message:
-			user = User(name , email , subject , message)
-			db.session.add(user)
-			db.session.commit()
-			flash(f'Your message has been sent!','success')
-			return redirect(url_for('home'))
+		user = User(username=form.username.data, email=form.email.data, subject=form.subject.data, message=form.message.data,)
+		db.session.add(user)
+		db.session.commit()
+		return(render_template(url_for('home')))
 	return render_template('layout.html', form=form)
 
 @app.route("/newsletter", methods=['GET','POST'])
@@ -88,16 +81,16 @@ def contactus():
 			return redirect(url_for('home'))
 	return render_template('contactus.html', title = 'Contact Us', form=form)
 
-@app.route("/register", methods=['GET', 'POST'])
-def register():
-    form = RegistrationForm()
-    if form.validate_on_submit():
-        user = User(username=form.username.data, email=form.email.data, password=form.password.data)
-        db.session.add(user)
-        db.session.commit()
-        flash('Your account has been created! You are now able to log in', 'success')
-        return redirect(url_for('home'))
-    return render_template('contact.html', title='Register', form=form)
+# @app.route("/register", methods=['GET', 'POST'])
+# def register():
+#     form = RegistrationForm()
+#     if form.validate_on_submit():
+#         user = User(username=form.username.data, email=form.email.data, password=form.password.data)
+#         db.session.add(user)
+#         db.session.commit()
+#         flash('Your account has been created! You are now able to log in', 'success')
+#         return redirect(url_for('home'))
+#     return render_template('contact.html', title='Register', form=form)
 
 @app.route("/layout2")
 def layout2():
