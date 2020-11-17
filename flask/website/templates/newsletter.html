@@ -13,15 +13,19 @@
 
 
         </header>
-        <form>
+        <form method="POST" action="">
+          {{ form.hidden_tag() }}
             <div class="input-section email-section"><input  type="email" onblur="validateEmail(this);" class="email" placeholder="ENTER YOUR E-MAIL HERE" required="enter email">
                 <div class="animated-button"><span class="icon-paper-plane"><i class="fa fa-envelope-o"></i></span><span class="next-button email"><i class="fa fa-arrow-up"></i></span></div>
+                  {{ form.email() }}
             </div>
             <div class="input-section password-section folded"><input class="password" type="text" placeholder="ENTER YOUR NAME HERE" />
-                <div class="animated-button"><span class="icon-lock"><i class="fa fa-share-square"></i></span><span class="next-button repeat-password"><i class="fa fa-arrow-up"></i></span></div>
+              <div class="animated-button"><span class="icon-lock"><i class="fa fa-share-square"></i></span><span class="next-button repeat-password"><i class="fa fa-arrow-up"></i></span></div>
+                  {{ form.name() }}
             </div>
 
             <div class="success">
+                {{ form.submit() }}
                 <p>THANK YOU</p>
             </div>
         </form>

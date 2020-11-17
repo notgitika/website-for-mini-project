@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+
+{% block footer %}
+    <!-- this gonna be footer -->
+    <footer id="footer" class="section-bg">
+        <div class="footer-top">
+          <div class="container">
+    
+            <div class="row">
+    
+              <div class="col-lg-6">
+    
+                <div class="row">
+    
+                    <div class="col-sm-12">
+    
+                      <div class="footer-info" style="font-family:Poppins, sans-serif;">
+                        <h3>Organisation</h3>
+    
+                      </div></div>
+    
+                    <div class="col-sm-8">
+    
+                      <div class="footer-links" >
+                        <br>
+                        <h4>Contact Us</h4>
+                        <p>
+                          <p> <i class="fa fa-map-marker">  &nbsp; A 108 Adam Street, <br> &emsp; New York, <br>  &emsp; NY 535022</i></p>
+    
+                          <p><i class="fa fa-phone"> &nbsp; +1 5589 55488 55s</i></p>
+    
+                          <p><i class="fa fa-envelope"> &nbsp; info@example.com</i></p>
+    
+                        </p>
+                      </div>
+    
+                      <div class="social-links">
+                        <a href="https://twitter.com/" class="twitter" target="_blank" rel=""><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                
+                <div class="content-section">
+                  <form method="POST" action="">
+                      {{ form.hidden_tag() }}
+                      <fieldset class="form-group">
+                          <legend class="border-bottom mb-4">Join Today</legend>
+                          <div class="form-group">
+                              {{ form.name.label(class="form-control-label") }}
+          
+                              {% if form.name.errors %}
+                                  {{ form.name(class="form-control form-control-lg is-invalid") }}
+                                  <div class="invalid-feedback">
+                                      {% for error in form.name.errors %}
+                                          <span>{{ error }}</span>
+                                      {% endfor %}
+                                  </div>
+                              {% else %}
+                                  {{ form.name(class="form-control form-control-lg") }}
+                              {% endif %}
+                          </div>
+                          <div class="form-group">
+                              {{ form.email.label(class="form-control-label") }}
+                              {% if form.email.errors %}
+                                  {{ form.email(class="form-control form-control-lg is-invalid") }}
+                                  <div class="invalid-feedback">
+                                      {% for error in form.email.errors %}
+                                          <span>{{ error }}</span>
+                                      {% endfor %}
+                                  </div>
+                              {% else %}
+                                  {{ form.email(class="form-control form-control-lg") }}
+                              {% endif %}
+                          </div>
+                          <div class="form-group">
+                              {{ form.subject.label(class="form-control-label") }}
+                              {% if form.subject.errors %}
+                                  {{ form.subject(class="form-control form-control-lg is-invalid") }}
+                                  <div class="invalid-feedback">
+                                      {% for error in form.subject.errors %}
+                                          <span>{{ error }}</span>
+                                      {% endfor %}
+                                  </div>
+                              {% else %}
+                                  {{ form.subject(class="form-control form-control-lg") }}
+                              {% endif %}
+                          </div>
+                          <div class="form-group">
+                              {{ form.message.label(class="form-control-label") }}
+                              {% if form.message.errors %}
+                                  {{ form.message(class="form-control form-control-lg is-invalid") }}
+                                  <div class="invalid-feedback">
+                                      {% for error in form.message.errors %}
+                                          <span>{{ error }}</span>
+                                      {% endfor %}
+                                  </div>
+                              {% else %}
+                                  {{ form.message(class="form-control form-control-lg") }}
+                              {% endif %}
+                          </div>
+                      </fieldset>
+                      <div class="form-group">
+                          {{ form.sendmessage(class="btn btn-outline-info") }}
+                      </div>
+                  </form>
+              </div>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+    
+      </footer><!-- #footer -->
+
+{% endblock %}

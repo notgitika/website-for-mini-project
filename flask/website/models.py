@@ -10,15 +10,6 @@ class User(db.Model):
 	def __repr__(self):
 		return f"User('{self.name}','{self.email}','{self.subject}','{self.message}')"
 
-# class User(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     username = db.Column(db.String(20), unique=True, nullable=False)
-#     email = db.Column(db.String(120), unique=True, nullable=False)
-#     password = db.Column(db.String(60), nullable=False)
-
-#     def _repr_(self):
-#         return f"User('{self.username}', '{self.email}')"
-
 
 class Newsletter(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
