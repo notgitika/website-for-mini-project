@@ -23,7 +23,7 @@
     
                       <div class="footer-links" >
                         <br>
-                        <h4>Contact Us</h4>
+                        <h4 style="font-size: 22px;">Contact Us</h4>
                         <p>
                           <p> <i class="fa fa-map-marker">  &nbsp; A 108 Adam Street, <br> &emsp; New York, <br>  &emsp; NY 535022</i></p>
     
@@ -49,7 +49,7 @@
                   <form method="POST" action="">
                       {{ form.hidden_tag() }}
                       <fieldset class="form-group">
-                          <legend class="border-bottom mb-4">Join Today</legend>
+                          <legend class="w-auto mb-4" style="font-size: 22px; font-weight: bold;">Join Today</legend>
                           <div class="form-group">
                               {{ form.name.label(class="form-control-label") }}
           
@@ -92,16 +92,7 @@
                           </div>
                           <div class="form-group">
                               {{ form.message.label(class="form-control-label") }}
-                              {% if form.message.errors %}
-                                  {{ form.message(class="form-control form-control-lg is-invalid") }}
-                                  <div class="invalid-feedback">
-                                      {% for error in form.message.errors %}
-                                          <span>{{ error }}</span>
-                                      {% endfor %}
-                                  </div>
-                              {% else %}
-                                  {{ form.message(class="form-control form-control-lg") }}
-                              {% endif %}
+                              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Please write something for us"></textarea>
                           </div>
                       </fieldset>
                       <div class="form-group">

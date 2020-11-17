@@ -6,18 +6,18 @@ from website.models import User, Newsletter
 
 
 class ContactForm(FlaskForm):
-    name = StringField('name',
+    name = StringField('Name',
                            validators=[DataRequired(), Length(min=2, max=20)])
-    email = StringField('email',
+    email = StringField('Email',
                         validators=[DataRequired(), Email()])
-    subject = StringField('subject',validators=[DataRequired(), Length(min=2, max=200)])
-    message = StringField('message',validators=[DataRequired(), Length(min=2, max=2000)])
+    subject = StringField('Subject',validators=[DataRequired(), Length(min=2, max=200)])
+    message = StringField('Message',validators=[DataRequired(), Length(min=2, max=2000)])
     sendmessage = SubmitField('Send message')
     
 
 class NewsletterSub(FlaskForm):
-    email = StringField('nemail',
+    email = StringField('email',
                         validators=[DataRequired(), Email()])
-    name = StringField('nname',
+    name = StringField('name',
                            validators=[DataRequired(), Length(min=2, max=20)])
     submit = SubmitField('Thank You')

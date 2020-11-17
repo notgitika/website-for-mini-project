@@ -20,10 +20,11 @@ def index():
 def layout():
 	form = ContactForm()
 	if form.validate_on_submit():
+		message = request.form['message']
 		user = User(name=form.name.data, email=form.email.data, subject=form.subject.data, message=form.message.data,)
 		db.session.add(user)
 		db.session.commit()
-		return render_template(url_for('home'))
+		return render_template('index.html', title ='Homepage', form = form)
 	return render_template('layout.html', form=form)
 
 @app.route("/newsletter", methods=['GET','POST'])
