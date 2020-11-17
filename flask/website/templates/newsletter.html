@@ -13,15 +13,16 @@
 
 
         </header>
-        <form>
-            <div class="input-section email-section"><input  type="email" onblur="validateEmail(this);" class="email" placeholder="ENTER YOUR E-MAIL HERE" required="enter email">
+        <form method="POST" action="">
+          {{ form.hidden_tag() }}
+            <div class="input-section email-section"><input  type="email" onblur="validateEmail(this);" class="email" placeholder="ENTER YOUR E-MAIL HERE" required="enter email" name = "email">
                 <div class="animated-button"><span class="icon-paper-plane"><i class="fa fa-envelope-o"></i></span><span class="next-button email"><i class="fa fa-arrow-up"></i></span></div>
             </div>
-            <div class="input-section password-section folded"><input class="password" type="text" placeholder="ENTER YOUR NAME HERE" />
-                <div class="animated-button"><span class="icon-lock"><i class="fa fa-share-square"></i></span><span class="next-button repeat-password"><i class="fa fa-arrow-up"></i></span></div>
+            <div class="input-section password-section folded"><input class="password" type="text" placeholder="ENTER YOUR NAME HERE" required="enter name" name = "name"/>
+              <div class="animated-button"><span class="icon-lock"><i class="fa fa-share-square"></i></span> <span class="next-button repeat-password"><button style="background-color: transparent; border: none", class = "submit"><i class="fa fa-arrow-up"></i></button></span></div>
             </div>
 
-            <div class="success">
+            <div class="success", style="background-color: #1bb1dc; padding: 5%;">
                 <p>THANK YOU</p>
             </div>
         </form>

@@ -1,68 +1,100 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, redirect, flash, request
 from website.forms import ContactForm, NewsletterSub
 from website.models import User, Newsletter
-from website import app
+from website import app, db
 
-@app.route("/")
-@app.route("/home")
+@app.route("/", methods = ['GET', 'POST'])
+@app.route("/home", methods = ['GET', 'POST'])
 def home():
-	return render_template('index.html', title ='Homepage')
+	form = ContactForm()
+	layout()
+	return render_template('index.html', title ='Homepage', form = form)
 
-@app.route("/index")
+@app.route("/index", methods = ['GET', 'POST'])
 def index():
-	return render_template('index.html', title ='Homepage')
+	form = ContactForm()
+	layout()
+	return render_template('index.html', title ='Homepage', form = form)
 
-@app.route("/layout")
+@app.route("/layout", methods = ['GET', 'POST'])
 def layout():
-	return render_template('layout.html')
+	form = ContactForm()
+	if form.validate_on_submit():
+		message = request.form['message']
+		user = User(name=form.name.data, email=form.email.data, subject=form.subject.data, message=form.message.data,)
+		db.session.add(user)
+		db.session.commit()
+		return render_template('index.html', title ='Homepage', form = form)
+	return render_template('layout.html', form=form)
 
 @app.route("/newsletter", methods=['GET','POST'])
 def newsletter():
 	form = NewsletterSub()
 	if form.validate_on_submit():
-		new = Newsletter(email = form.email.data, name=form.name.data)
+		email1 = request.form['email']
+		name1 = request.form['name']
+		new = Newsletter(email=email1, name=name1)
 		db.session.add(new)
 		db.session.commit()
-		flash(f'Your message has been sent!','success')
-		return redirect(url_for('home'))
-	return render_template('newsletter.html', title = 'Newsletter')
+		return render_template('newsletter.html', title = 'Newsletter', form = form)
+	return render_template('newsletter.html', title = 'Newsletter', form = form)
 
-@app.route("/ourwork")
+@app.route("/ourwork", methods = ['GET', 'POST'])
 def ourwork():
-	return render_template('ourwork.html', title = 'Our Work')
+	form = ContactForm()
+	layout()
+	return render_template('ourwork.html', title = 'Our Work', form = form)
 
-@app.route("/vision")
+@app.route("/vision", methods = ['GET', 'POST'])
 def vision():
-	return render_template('vision.html', title = 'Vision and Mission')
+	form = ContactForm()
+	layout()
+	return render_template('vision.html', title = 'Vision and Mission', form = form)
 
-@app.route("/visioners")
+@app.route("/visioners", methods = ['GET', 'POST'])
 def visioners():
-	return render_template('visioners.html')
+	form = ContactForm()
+	layout()
+	return render_template('visioners.html', title = 'Visioners', form = form)
 
-@app.route("/reach")
+@app.route("/reach", methods = ['GET', 'POST'])
 def reach():
-	return render_template('reach.html')
+	form = ContactForm()
+	layout()
+	return render_template('reach.html', title = 'Reach', form = form)
 
-@app.route("/impact")
+@app.route("/impact", methods = ['GET', 'POST'])
 def impact():
-	return render_template('impact.html')
+	form = ContactForm()
+	layout()
+	return render_template('impact.html', title = "impact", form = form)
 
-@app.route("/partners")
+@app.route("/partners", methods = ['GET', 'POST'])
 def partners():
-	return render_template('partners.html')
+	form = ContactForm()
+	layout()
+	return render_template('partners.html', title = "partners", form = form)
 
-@app.route("/gallery")
+@app.route("/gallery", methods = ['GET', 'POST'])
 def gallery():
-	return render_template('gallery.html', title ='Gallery')
+	form = ContactForm()
+	layout()
+	return render_template('gallery.html', title ='Gallery', form = form)
 
-@app.route("/team")
+@app.route("/team", methods = ['GET', 'POST'])
 def team():
-	return render_template('team.html', title = 'Team')
+	form = ContactForm()
+	layout()
+	return render_template('team.html', title = 'Team', form = form)
 
-@app.route("/contactus")
+@app.route("/contactus", methods = ['GET', 'POST'])
 def contactus():
-	return render_template('contactus.html', title = 'Contact Us')
+	form = ContactForm()
+	layout()
+	return render_template('contactus.html', title = 'Contact Us', form=form)
 
-@app.route("/layout2")
+@app.route("/layout2", methods = ['GET', 'POST'])
 def layout2():
-	return render_template('layout2.html')
+	form = ContactForm()
+	layout()
+	return render_template('layout2.html', form = form)

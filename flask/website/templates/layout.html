@@ -40,20 +40,12 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/layout2.css') }}">
    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
-
-
-  <!-- =======================================================
-    Theme Name: Rapid
-    Theme URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
 </head>
 
 
 <body>
     <!--==========================
-    Header
+                Header
     ============================-->
     <header id="header">
 
@@ -71,18 +63,6 @@
       <div class="container">
 
         <div class="logo float-left">
-
-          <!-- Uncomment below if you prefer to use an image logo
-
-
-            Homepage
-            About us - Our work, Vision, People behind xyz, Way forward, Reach & presence, Impact, Our Partners, (Values), etc
-            Gallery (organized project wise)+ Our team
-            Media & Reporting
-            Success stories
-            List of beneficiaries
-            Contact us - footer
-            contact us - new page as well-->
 
           <h1 class="text-light"><a href="#intro" class="scrollto"><span>ORGANISATION</span></a></h1>
           <!-- <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
@@ -115,88 +95,7 @@
 
     <br><br><br><br>
     {% block content %}{% endblock %}
-
-
-    <!-- this gonna be footer -->
-   <footer id="footer" class="section-bg">
-    <div class="footer-top">
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6">
-
-            <div class="row">
-
-                <div class="col-sm-12">
-
-                  <div class="footer-info" style="font-family:Poppins, sans-serif;">
-                    <h3>Organisation</h3>
-
-                  </div></div>
-
-                <div class="col-sm-8">
-
-                  <div class="footer-links" >
-                    <br>
-                    <h4>Contact Us</h4>
-                    <p>
-                      <p> <i class="fa fa-map-marker">  &nbsp; A 108 Adam Street, <br> &emsp; New York, <br>  &emsp; NY 535022</i></p>
-
-                      <p><i class="fa fa-phone"> &nbsp; +1 5589 55488 55s</i></p>
-
-                      <p><i class="fa fa-envelope"> &nbsp; info@example.com</i></p>
-
-                    </p>
-                  </div>
-
-                  <div class="social-links">
-                    <a href="https://twitter.com/" class="twitter" target="_blank" rel=""><i class="fa fa-twitter"></i></a>
-                    <a href="https://www.facebook.com/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <!-- <br><br> -->
-            <div class="form">
-              <h4>Send us a message</h4>
-              <p>Eos ipsa est voluptates. Nostrum nam libero ipsa vero. Debitis quasi sit eaque numquam similique commodi harum aut temporibus.</p>
-              <form action="" method="post" role="form" class="contactForm">
-                <div class="form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                  <div class="validation"></div>
-                </div>
-
-                <div id="sendmessage">Your message has been sent. Thank you!</div>
-                <div id="errormessage"></div>
-
-                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
-              </form>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-
-  </footer><!-- #footer -->
+    {% block footer %}{% endblock %}
 
   <a href="index.html" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
