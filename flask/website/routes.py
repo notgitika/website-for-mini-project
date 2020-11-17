@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, redirect, flash
+from flask import Flask, render_template, url_for, redirect, flash, request
 from website.forms import ContactForm, NewsletterSub
 from website.models import User, Newsletter
 from website import app, db
@@ -30,10 +30,12 @@ def layout():
 def newsletter():
 	form = NewsletterSub()
 	if form.validate_on_submit():
-		new = Newsletter(email=form.email.data, name=form.name.data)
+		email1 = request.form['email']
+		name1 = request.form['name']
+		new = Newsletter(email=email1, name=name1)
 		db.session.add(new)
 		db.session.commit()
-		return render_template('newsletter.html', title = 'Newsletter')
+		return render_template('newsletter.html', title = 'Newsletter', form = form)
 	return render_template('newsletter.html', title = 'Newsletter', form = form)
 
 @app.route("/ourwork", methods = ['GET', 'POST'])
