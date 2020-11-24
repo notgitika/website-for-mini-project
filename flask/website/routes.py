@@ -98,3 +98,9 @@ def layout2():
 	form = ContactForm()
 	layout()
 	return render_template('layout2.html', form = form)
+
+@app.route("/canvas", methods = ['GET', 'POST'])
+def canvas():
+	form = ContactForm()
+	layout()
+	return render_template('canvas.html', title = "canvas", form = form)
