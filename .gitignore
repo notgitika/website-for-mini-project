@@ -3,4 +3,3 @@
 .flask/website/__pycache__/
 *.pyc
 .vscode/
-*.db
