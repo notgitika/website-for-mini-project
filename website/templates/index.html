@@ -1,4 +1,5 @@
-{% extends "layout.html" %}
+{% extends "mainfinal.html" %}
+
 {% block content %}
   <!--==========================
     Intro Section
@@ -64,14 +65,14 @@
           <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
             <div class="box">
               <div class="icon" style="background: #fceef3;"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
-              <h4 class="title"><a href="">Development</a></h4>
+              <h4 class="title">Development</h4>
               <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
             <div class="box">
               <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
-              <h4 class="title"><a href="">Community Bonding</a></h4>
+              <h4 class="title">Community Bonding</h4>
               <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
             </div>
           </div>
@@ -79,7 +80,7 @@
           <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
             <div class="box">
               <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
-              <h4 class="title"><a href="">Empowerment</a></h4>
+              <h4 class="title">Empowerment</h4>
               <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
             </div>
           </div>
@@ -163,7 +164,7 @@
                 <p>Card</p>
                 <div>
                   <a href="{{ url_for('static', filename='img/portfolio/img4.jpg') }}" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
-        
+                </div>
               </div>
             </div>
           </div>
@@ -461,8 +462,18 @@
 
     
 <!-- This gonna be the newsletter wala -->
-<br><br>
-<div class="text-center" style="font-size: 40px;">Would you like to stay connected?</div> <br>
-<div class="text-center"><button class="btn"><a href="{{ url_for('newsletter') }}" style="color: white;">Subscribe to the newsletter</a></button></div>
+<section class="wow fadeInUp">
+  <div class="container">
+
+    <header class="section-header">
+      <h3>Would you like to stay connected?</h3>
+    </header>
+
+<!-- <div class="text-center" style="font-size: 40px; font-family: Poppins;">Would you like to stay connected?</div> <br> -->
+<div class="text-center"><button class="btn btn-primary" style="background-color: #1bb1dc"><a href="{{ url_for('newsletter') }}" style="color: #fff; background-color: #1bb1dc ;">Subscribe to the newsletter</a></button></div>
+  </div> 
+</section>
+
+<br>
 <br>
 {% endblock content%}

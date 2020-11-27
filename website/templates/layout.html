@@ -38,22 +38,15 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='gallery/foundation.min.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='gallery/set1.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/layout2.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/activelink.css') }}">
    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
-
-
-  <!-- =======================================================
-    Theme Name: Rapid
-    Theme URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
 </head>
 
 
 <body>
     <!--==========================
-    Header
+                Header
     ============================-->
     <header id="header">
 
@@ -72,40 +65,28 @@
 
         <div class="logo float-left">
 
-          <!-- Uncomment below if you prefer to use an image logo
-
-
-            Homepage
-            About us - Our work, Vision, People behind xyz, Way forward, Reach & presence, Impact, Our Partners, (Values), etc
-            Gallery (organized project wise)+ Our team
-            Media & Reporting
-            Success stories
-            List of beneficiaries
-            Contact us - footer
-            contact us - new page as well-->
-
           <h1 class="text-light"><a href="#intro" class="scrollto"><span>ORGANISATION</span></a></h1>
           <!-- <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
         </div>
 
         <nav class="main-nav float-right d-none d-md-block">
           <ul>
-            <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
-            <li class="drop-down"><a href="{{ url_for('ourwork') }}">About Us</a>
+            <li role="presentation" {% if title == 'Homepage' %}class="active"{% endif %}><a href="{{ url_for('home') }}" >Home</a></li>
+            <li class="drop-down"><a href="{{ url_for('ourwork') }}" >About Us</a>
             <ul>
-              <li><a href="{{ url_for('ourwork') }}">Our Work</a></li>
-              <li><a href="{{ url_for('vision') }}">Vision & Mission</a></li>
-              <li><a href="{{ url_for('visioners') }}">Visioners</a></li>
-              <li><a href="{{ url_for('reach') }}">Reach and presence</a></li>
-              <li><a href="{{ url_for('impact') }}">Impact</a></li>
-              <li><a href="{{ url_for('partners') }}">Our Partners</a></li>
-              
+              <li><a href="{{ url_for('ourwork') }}" class="activelink-trial" >Our Work</a></li>
+              <li><a href="{{ url_for('vision') }}" class="activelink-trial">Vision & Mission</a></li>
+              <li><a href="{{ url_for('visioners') }}" class="activelink-trial" >Visioners</a></li>
+              <li><a href="{{ url_for('reach') }}" class="activelink-trial" >Reach and presence</a></li>
+              <li><a href="{{ url_for('impact') }}" class="activelink-trial" >Impact</a></li>
+              <li><a href="{{ url_for('partners') }}" class="activelink-trial" >Our Partners</a></li>
+
             </ul>
             </li>
-            <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
-            <li><a href="{{ url_for('team') }}">Team</a></li>
-            <li><a href="{{ url_for('contactus') }}">Contact Us</a></li>
-            <li><a href="{{ url_for('newsletter') }}">Newsletter</a></li>
+            <li role="presentation" {% if title == 'Gallery' %}class="active"{% endif %}><a href="{{ url_for('gallery') }}" >Gallery</a></li>
+            <li role="presentation" {% if title == 'Newsletter' %}class="active"{% endif %}><a href="{{ url_for('newsletter') }}" >Newsletter</a></li>
+            <li role="presentation" {% if title == 'Team' %}class="active"{% endif %}><a href="{{ url_for('team') }}" >Team</a></li>
+            <li role="presentation" {% if title == 'Contact Us' %}class="active"{% endif %}><a href="{{ url_for('contactus') }}" >Contact Us</a></li>
           </ul>
         </nav><!-- .main-nav -->
 
@@ -115,92 +96,14 @@
 
     <br><br><br><br>
     {% block content %}{% endblock %}
-  
-
-    <!-- this gonna be footer -->
-   <footer id="footer" class="section-bg">
-    <div class="footer-top">
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6">
-
-            <div class="row">
-
-                <div class="col-sm-12">
-
-                  <div class="footer-info" style="font-family:Montserrat, sans-serif;">
-                    <h3>Organisation</h3>
-                    <p></p>
-                  </div>
-
-                  <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241316.6433229747!2d72.74109780863927!3d19.08252232377542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1604934462227!5m2!1sen!2sin" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe> -->
-
-                </div>
-
-                <div class="col-sm-8">
-
-                  <div class="footer-links">
-                    <h4>Contact Us</h4>
-                    <p>
-                      <i class="fa fa-map-marker"> A 108 Adam StreetNew York, NY 535022</i><br><br>
-                      
-                      <i class="fa fa-phone"> +1 5589 55488 55s</i><br><br>
-                      
-                      <i class="fa fa-envelope"> info@example.com</i><br><br>
-                      
-                    </p>
-                  </div>
-
-                  <div class="social-links">
-                    <a href="https://twitter.com/" class="twitter" target="_blank" rel=""><i class="fa fa-twitter"></i></a>
-                    <a href="https://www.facebook.com/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="form">
-              <h4>Send us a message</h4>
-              <p>Eos ipsa est voluptates. Nostrum nam libero ipsa vero. Debitis quasi sit eaque numquam similique commodi harum aut temporibus.</p>
-              <form action="" method="post" role="form" class="contactForm">
-                <div class="form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                  <div class="validation"></div>
-                </div>
-
-                <div id="sendmessage">Your message has been sent. Thank you!</div>
-                <div id="errormessage"></div>
-
-                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
-              </form>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-
-  </footer><!-- #footer -->
+    {% block footer %}{% endblock %}
 
   <a href="index.html" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- CSS Stylesheets -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}">
+
 <!-- JavaScript Libraries -->
  <script type="text/javascript" src="{{ url_for('static', filename='lib/jquery/jquery.min.js') }}"></script>
  <script type="text/javascript" src="{{ url_for('static', filename='lib/jquery/jquery-migrate.min.js') }}"></script>
@@ -215,7 +118,6 @@
  <script type="text/javascript" src="{{ url_for('static', filename='lib/isotope/isotope.pkgd.min.js') }}"></script>
   <script type="text/javascript" src="{{ url_for('static', filename='lib/lightbox/js/lightbox.min.js') }}"></script>
   <!-- Contact Form JavaScript File -->
-  <!-- idk if this is supposed to be included or not-->
 <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/main1.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/vedant.js') }}"></script>
