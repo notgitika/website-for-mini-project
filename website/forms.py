@@ -14,6 +14,10 @@ class ContactForm(FlaskForm):
     message = StringField('Message',validators=[DataRequired(), Length(min=2, max=2000)])
     sendmessage = SubmitField('Send message')
     
+        # def validate_email(self, email):
+    #     user = User.query,filter_by(email = email.data).first()
+    #     if user:
+    #         raise ValidationError('That email already has already sent an email. Please continue the conversation on email')
 
 class NewsletterSub(FlaskForm):
     email = StringField('email',
@@ -21,3 +25,8 @@ class NewsletterSub(FlaskForm):
     name = StringField('name',
                            validators=[DataRequired(), Length(min=2, max=20)])
     submit = SubmitField('Thank You')
+
+    # def validate_email(self, email):
+    #     new = Newsletter.query,filter_by(email = email.data).first()
+    #     if new:
+    #         raise ValidationError('That email already has already sent an email. Please continue the conversation on email')
