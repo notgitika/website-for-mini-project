@@ -38,6 +38,7 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='gallery/foundation.min.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='gallery/set1.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/layout2.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/activelink.css') }}">
    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
 </head>
@@ -73,12 +74,12 @@
             <li role="presentation" {% if title == 'Homepage' %}class="active"{% endif %}><a href="{{ url_for('home') }}" >Home</a></li>
             <li class="drop-down"><a href="{{ url_for('ourwork') }}" >About Us</a>
             <ul>
-              <li><a href="{{ url_for('ourwork') }}" >Our Work</a></li>
-              <li><a href="{{ url_for('vision') }}" >Vision & Mission</a></li>
-              <li><a href="{{ url_for('visioners') }}" >Visioners</a></li>
-              <li><a href="{{ url_for('reach') }}" >Reach and presence</a></li>
-              <li><a href="{{ url_for('impact') }}" >Impact</a></li>
-              <li><a href="{{ url_for('partners') }}" >Our Partners</a></li>
+              <li><a href="{{ url_for('ourwork') }}" class="activelink-trial" >Our Work</a></li>
+              <li><a href="{{ url_for('vision') }}" class="activelink-trial">Vision & Mission</a></li>
+              <li><a href="{{ url_for('visioners') }}" class="activelink-trial" >Visioners</a></li>
+              <li><a href="{{ url_for('reach') }}" class="activelink-trial" >Reach and presence</a></li>
+              <li><a href="{{ url_for('impact') }}" class="activelink-trial" >Impact</a></li>
+              <li><a href="{{ url_for('partners') }}" class="activelink-trial" >Our Partners</a></li>
 
             </ul>
             </li>
