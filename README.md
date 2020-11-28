@@ -1,5 +1,7 @@
 # Website for a Socio-Economic Organization
 
+## You can view the deployment of this website at [here](https://organization-name.herokuapp.com/)
+
 ### Git and Github workflow for this project
 
 1. Make sure you are working on your branch/a shared branch working on the same thing `git checkout -b branch-name`. Also make sure you are always working on the most updated code in the main branch by executing `git pull origin main` everytime you want to start working so as to avoid extra merge conflicts. Also, try to keep a local copy of the files, esp the files you've changed but not pushed successfully.
